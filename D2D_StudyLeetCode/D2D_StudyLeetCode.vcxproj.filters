@@ -6,6 +6,15 @@
     <ClInclude Include="Program\Window.h">
       <Filter>Program</Filter>
     </ClInclude>
+    <ClInclude Include="_Libraries\DirectXTex\DirectXTex.h">
+      <Filter>_Libraries\DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="_Libraries\DirectXTK\SimpleMath.h">
+      <Filter>_Libraries\DirectXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="Program\Graphics.h">
+      <Filter>Program</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -13,10 +22,30 @@
     <ClCompile Include="Program\Window.cpp">
       <Filter>Program</Filter>
     </ClCompile>
+    <ClCompile Include="Program\Graphics.cpp">
+      <Filter>Program</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Program">
       <UniqueIdentifier>{9be9c610-abec-42b9-8e10-f93decd2664a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="_Libraries">
+      <UniqueIdentifier>{30d22421-923c-46af-80bb-ba353d8db045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libraries\DirectXTex">
+      <UniqueIdentifier>{4863838a-b1a1-4cd4-8c51-438c55f55682}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libraries\DirectXTK">
+      <UniqueIdentifier>{d97328ae-89db-497d-a59c-313de7a34e53}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_Libraries\DirectXTex\DirectXTex.inl">
+      <Filter>_Libraries\DirectXTex</Filter>
+    </None>
+    <None Include="_Libraries\DirectXTK\SimpleMath.inl">
+      <Filter>_Libraries\DirectXTK</Filter>
+    </None>
   </ItemGroup>
 </Project>

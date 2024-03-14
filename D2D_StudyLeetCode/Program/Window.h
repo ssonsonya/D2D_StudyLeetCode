@@ -20,12 +20,15 @@ public:
 	Window(WinDesc desc);
 	~Window();
 
+public:
 	ATOM MyRegisterClass(WinDesc desc);
-
 	WPARAM Run();
 
 private:
 	static LRESULT CALLBACK WndProc(HWND handle, UINT message, WPARAM wParam, LPARAM lParam);
 
+private:
 	WinDesc m_desc;
+
+	static bool isWindowCreated;
 };

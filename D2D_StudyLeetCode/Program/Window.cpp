@@ -1,6 +1,9 @@
 #include "stdafx.h"
 #include "Window.h"
 
+// Window Validation Check
+bool Window::isWindowCreated = false;
+
 Window::Window(WinDesc initDesc)
 {
     m_desc = initDesc;
@@ -70,6 +73,8 @@ ATOM Window::MyRegisterClass(WinDesc desc)
 
 WPARAM Window::Run()
 {
+    isWindowCreated = true;
+
     MSG msg = { 0 };
     while (true)
     {
@@ -80,6 +85,11 @@ WPARAM Window::Run()
             TranslateMessage(&msg);
             DispatchMessage(&msg);
         }
+        else
+        {
+            GRAPHICS->Begin();
+            GRAPHICS->End();
+        }
     }
 
     return msg.wParam;
@@ -87,9 +97,23 @@ WPARAM Window::Run()
 
 LRESULT Window::WndProc(HWND handle, UINT message, WPARAM wParam, LPARAM lParam)
 {
-    if (message == WM_CLOSE || message == WM_DESTROY)
+    PAINTSTRUCT ps;
+    ZeroMemory(&ps, sizeof(ps));
+
+    switch (message)
     {
+    case WM_CREATE:
+        g_handle = handle;
+        break;
+    case WM_SIZE:
+        g_winWidth = LOWORD(lParam);
+        g_winHeight = HIWORD(lParam);
+        GRAPHICS->Resize(g_winWidth, g_winHeight);
+        break;
+    case WM_CLOSE:
+    case WM_DESTROY:
         PostQuitMessage(0);
+
         return 0;
     }
 
