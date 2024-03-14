@@ -2,7 +2,7 @@
 #include "Window.h"
 
 // Window Validation Check
-bool Window::isWindowCreated = false;
+bool Window::m_isWindowCreated = false;
 
 Window::Window(WinDesc initDesc)
 {
@@ -73,7 +73,7 @@ ATOM Window::MyRegisterClass(WinDesc desc)
 
 WPARAM Window::Run()
 {
-    isWindowCreated = true;
+    m_isWindowCreated = true;
 
     MSG msg = { 0 };
     while (true)

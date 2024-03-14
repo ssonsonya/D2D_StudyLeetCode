@@ -30,5 +30,5 @@ private:
 private:
 	WinDesc m_desc;
 
-	static bool isWindowCreated;
+	static bool m_isWindowCreated;
 };
