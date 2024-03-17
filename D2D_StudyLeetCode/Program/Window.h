@@ -30,5 +30,6 @@ private:
 private:
 	WinDesc m_desc;
 
+	static unique_ptr<class Program> m_program;
 	static bool m_isWindowCreated;
 };

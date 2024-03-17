@@ -111,5 +111,8 @@ extern float g_winHeight;
 // Graphics
 #include "Program/Graphics.h"
 #define GRAPHICS Graphics::Get()
-#define DEVICE Graphics::GetDevice()
-#define DC Graphics::GetDC()
+#define DEVICE GRAPHICS->GetDevice()
+#define DC GRAPHICS->GetDC()
+
+// Program
+#include "Program/Program.h"

@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "Window.h"
+#include "Program.h"
 
+unique_ptr<Program> Window::m_program = nullptr;
 // Window Validation Check
 bool Window::m_isWindowCreated = false;
 
@@ -74,6 +76,7 @@ ATOM Window::MyRegisterClass(WinDesc desc)
 WPARAM Window::Run()
 {
     m_isWindowCreated = true;
+    m_program = make_unique<Program>();
 
     MSG msg = { 0 };
     while (true)
@@ -87,7 +90,12 @@ WPARAM Window::Run()
         }
         else
         {
+            m_program->Update();
+
             GRAPHICS->Begin();
+            {
+                m_program->Render();
+            }
             GRAPHICS->End();
         }
     }

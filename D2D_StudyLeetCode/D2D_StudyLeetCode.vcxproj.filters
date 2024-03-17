@@ -15,6 +15,9 @@
     <ClInclude Include="Program\Graphics.h">
       <Filter>Program</Filter>
     </ClInclude>
+    <ClInclude Include="Program\Program.h">
+      <Filter>Program</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -23,6 +26,9 @@
       <Filter>Program</Filter>
     </ClCompile>
     <ClCompile Include="Program\Graphics.cpp">
+      <Filter>Program</Filter>
+    </ClCompile>
+    <ClCompile Include="Program\Program.cpp">
       <Filter>Program</Filter>
     </ClCompile>
   </ItemGroup>
@@ -39,6 +45,27 @@
     <Filter Include="_Libraries\DirectXTK">
       <UniqueIdentifier>{d97328ae-89db-497d-a59c-313de7a34e53}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Renders">
+      <UniqueIdentifier>{87aa5fd1-1a89-4521-b6b5-a42982fbfb40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renders\IA">
+      <UniqueIdentifier>{8a76dbc8-1b50-449d-ad45-4fbf9caf8e76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renders\Resources">
+      <UniqueIdentifier>{6f72f4c0-f024-4517-9a19-3e477c570437}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renders\Shaders">
+      <UniqueIdentifier>{d080e198-f12f-42ca-8bfa-89ea9605461b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{4cc8faf5-be9f-4079-97e6-59f62136d3e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Basics">
+      <UniqueIdentifier>{34ae7ffc-7d43-4efc-b6c6-1c439926bf19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_ShaderFiles">
+      <UniqueIdentifier>{e12c0d25-09dd-4b29-8ffd-b73b0931fba4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="_Libraries\DirectXTex\DirectXTex.inl">
@@ -47,5 +74,10 @@
     <None Include="_Libraries\DirectXTK\SimpleMath.inl">
       <Filter>_Libraries\DirectXTK</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="_ShaderFiles\VertexColor.hlsl">
+      <Filter>_ShaderFiles</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>
