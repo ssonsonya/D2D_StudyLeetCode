@@ -158,6 +158,13 @@
     <ClInclude Include="Program\Graphics.h" />
     <ClInclude Include="Program\Program.h" />
     <ClInclude Include="Program\Window.h" />
+    <ClInclude Include="Renders\IA\IndexBuffer.h" />
+    <ClInclude Include="Renders\IA\InputLayout.h" />
+    <ClInclude Include="Renders\IA\VertexBuffer.h" />
+    <ClInclude Include="Renders\Resources\VertexType.h" />
+    <ClInclude Include="Renders\Shaders\IShader.h" />
+    <ClInclude Include="Renders\Shaders\PixelShader.h" />
+    <ClInclude Include="Renders\Shaders\VertexShader.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="_Libraries\DirectXTex\DirectXTex.h" />
@@ -168,6 +175,13 @@
     <ClCompile Include="Program\Graphics.cpp" />
     <ClCompile Include="Program\Program.cpp" />
     <ClCompile Include="Program\Window.cpp" />
+    <ClCompile Include="Renders\IA\IndexBuffer.cpp" />
+    <ClCompile Include="Renders\IA\InputLayout.cpp" />
+    <ClCompile Include="Renders\IA\VertexBuffer.cpp" />
+    <ClCompile Include="Renders\Resources\VertexType.cpp" />
+    <ClCompile Include="Renders\Shaders\IShader.cpp" />
+    <ClCompile Include="Renders\Shaders\PixelShader.cpp" />
+    <ClCompile Include="Renders\Shaders\VertexShader.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

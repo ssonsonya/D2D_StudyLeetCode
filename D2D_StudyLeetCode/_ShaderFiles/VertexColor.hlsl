@@ -19,7 +19,6 @@ cbuffer TransformBuffer : register(b0)
 
 PixelInput VS(VertexInput input)
 {
-   
     PixelInput output;
     
     output.position = mul(input.position, _world);

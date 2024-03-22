@@ -114,5 +114,14 @@ extern float g_winHeight;
 #define DEVICE GRAPHICS->GetDevice()
 #define DC GRAPHICS->GetDC()
 
+// Renders
+#include "Renders/Resources/VertexType.h"
+#include "Renders/IA/VertexBuffer.h"
+#include "Renders/IA/IndexBuffer.h"
+#include "Renders/Shaders/IShader.h"
+#include "Renders/Shaders/VertexShader.h"
+#include "Renders/IA/InputLayout.h"
+#include "Renders/Shaders/PixelShader.h"
+
 // Program
 #include "Program/Program.h"

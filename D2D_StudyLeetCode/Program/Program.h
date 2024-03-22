@@ -1,11 +1,5 @@
 #pragma once
 
-struct VertexColor
-{
-	Vector2 position = Vector2(0.0f, 0.0f);
-	Color color = Color(0.0f, 0.0f, 0.0f);
-};
-
 struct TransformData
 {
 	Matrix world;
@@ -24,18 +18,16 @@ public:
 
 private:
 	vector<VertexColor> m_vertices;
-	ComPtr<ID3D11Buffer> m_vertexBuffer;
+	unique_ptr<VertexBuffer> m_vertexBuffer = nullptr;
 
 	vector<UINT> m_indeces;
-	ComPtr<ID3D11Buffer> m_indexBuffer;
+	unique_ptr<IndexBuffer> m_indexBuffer = nullptr;
 
-	ComPtr<ID3DBlob> m_vsBlob;
-	ComPtr<ID3D11VertexShader> m_vertexShader;
+	unique_ptr<VertexShader> m_vertexShader = nullptr;
 
-	ComPtr<ID3D11InputLayout> m_inputLayout;
+	unique_ptr<InputLayout> m_inputLayout = nullptr;
 
-	ComPtr<ID3DBlob> m_psBlob;
-	ComPtr<ID3D11PixelShader> m_pixelShader;
+	unique_ptr<PixelShader> m_pixelShader = nullptr;
 
 	Matrix m_world, m_view, m_projection;
 
